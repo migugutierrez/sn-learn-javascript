@@ -24,7 +24,7 @@ function convertTemp(convertTo, temp) {
   if (convertTo == 'C') {
     return toCelsius(temp);
   } 
-    
+    //removed 'else'
   return toFahrenheit(temp);
   
 }
