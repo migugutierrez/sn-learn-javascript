@@ -3,7 +3,8 @@
 // Just need one record? Use .get(SYSID) or .get('fieldName', fieldValue)
 //
 var incGr = new GlideRecord('incident');
-
+// same as: incGR.addQuery('sys_id', '965c9e5347c12200e0ef563dbb9a7156');
+//  incGR.query();
 if (incGr.get('965c9e5347c12200e0ef563dbb9a7156')) {
   gs.info(incGr.getValue('number'));
 }
