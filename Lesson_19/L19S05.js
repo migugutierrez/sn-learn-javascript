@@ -1,7 +1,7 @@
 //
 // L19S05 - Global variables and local
 //
-var convertTo = 'F';
+//var convertTo = 'F';
 
 function toCelsius(f) {
 
@@ -17,14 +17,16 @@ function toFahrenheit(c) {
     return f;
 }
 
-function convertTemp(temp) {
-
+function convertTemp(convertTo, temp) {
+  //updated to local variable  
+  var convertTo = '';
   // use the global variable to determine conversion
   if (convertTo == 'C') {
     return toCelsius(temp);
-  } else {
-    return toFahrenheit(temp);
-  }
+  } 
+    
+  return toFahrenheit(temp);
+  
 }
-
-gs.info(convertTemp(100));
+//pass in either 'F' or 'C' to convert selected temp.
+gs.info(convertTemp('F', 100));
